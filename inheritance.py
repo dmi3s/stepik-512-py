@@ -6,7 +6,7 @@ class Hierarchy:
     def __init__(self) -> ():
         self.dict = {}
 
-    def add(self, name: string, parents: List = []) -> ():
+    def add(self, name: string, parents: List = []) -> None:
         self.dict[name] = parents
 
     def is_derived_from(self, derived: string, base: string) -> bool:
@@ -35,7 +35,7 @@ def parse_request(req: string) -> (string, string):
     return base, derived
 
 
-if __name__ == '__main__':
+def main():
     h = Hierarchy()
     for __ in range(int(input())):
         class_name, parents = parse_definition(input())
@@ -44,3 +44,8 @@ if __name__ == '__main__':
         b, d = parse_request(input())
         answer = "Yes" if h.is_base_of(b, d) else "No"
         print(answer)
+
+
+if __name__ == '__main__':
+    main()
+
