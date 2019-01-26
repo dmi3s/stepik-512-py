@@ -6,7 +6,7 @@ class Hierarchy:
     def __init__(self) -> ():
         self.dict = {}
 
-    def add(self, name: string, parents: List = []) -> None:
+    def add(self, name: string, parents: List = None) -> None:
         self.dict[name] = parents
 
     def is_derived_from(self, derived: string, base: string) -> bool:
@@ -48,4 +48,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
