@@ -1,5 +1,6 @@
 import string
 
+
 class Hierarchy(dict):
     def is_derived_from(self, derived: string, base: string) -> bool:
         if derived not in self:
